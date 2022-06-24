@@ -1,0 +1,93 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Intercal",
+	"patterns": [
+		{"include": "#labels"},
+		{"include": "#imparitive"},
+		{"include": "#keywords"},
+		{"include": "#gerund"},
+		{"include": "#storage"},
+		{"include": "#comment"},
+		{"include": "#operators"}
+
+	],
+	"repository": {
+		"imparitive": {
+
+			"patterns": [
+			{
+				"name": "keyword.politeness.intercal",
+				"match": "\\b(?i)(please|do)"
+
+			},{
+				"name": "keyword.control.intercal",
+				"match": "%[0-9]{,2}"
+			}]
+
+		},
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.intercal",
+				"match": "\\b(?i)(resume|come\\sfrom|next(\\sfrom)?|give\\sup|try\\sagain|while|learns|finish studying)\\b"
+			},
+			{
+				"name": "storage.modifier.intercal",
+				"match": "(?i)(sub)"
+			},
+
+			{
+				"name": "keyword.other.intercal",
+				"match": "\\b(?i)(reinstate|abstain|forget|stash|retrieve|ignore|remember|read\\sout|write\\sin|create|enslave|free|study|enrol|graduate|steal|smuggle|destroy)\\b"
+
+			},
+			{
+				"name": "keyword.other.intercal",
+				"match": "\\b(?i)(at|in class|learns|to learn|from|to)\\b"
+
+			}
+		]
+		},
+		"paren-expression": {
+			"name": "paren.rabbitears.double.intercal"
+		},
+		"storage": {
+			"patterns": [{
+				"name": "variable.other.intercal",
+				"match": "[.:;,@][V&?\\^]?[0-9]+"
+			},
+			{
+				"name": "constant.numeric.intercal",
+				"match": "#[0-9]+"
+
+			}]
+			
+		},
+		"operators": {
+			"patterns": [{
+				"name": "keyword.opeator.intercal",
+				"match": "(~|\\$|\\<-|¢|@|\\?|^|[0-9]+|\\+)"
+			}]
+		},
+		"comment": {
+			"patterns": [{
+				"name": "comment.line.intercal",
+				"match": "(?i)(NOT|N'T|¬).*$"
+			}]
+		},
+		"labels": {
+			"patterns": [{
+				"name": "name.section.intercal",
+				"match": "\\([0-9]+\\)"
+			}]
+		},
+		"gerund": {
+			"patterns": [{
+				"name":"string.gerund.intercal",
+				"match": "\\b(?i)(coming\\sfrom|nexting(\\sfrom)?|trying\\sagain|whiling|looping|going\\sback|going\\sahead|creating|resuming|calculating|forgetting|resuming|stashing|ignoring|remembering|abstaining|reinstating|reading\\sout|writing\\sin|commenting|enslaving|freeing|studying|enrolling|finising(\\slecture)?|learning|graduating|stealing|smuggling|destroying)\\b"
+				}
+			]
+		}
+
+	},
+	"scopeName": "source.i"
+}
