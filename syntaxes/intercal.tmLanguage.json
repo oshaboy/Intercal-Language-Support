@@ -53,7 +53,7 @@
 		"storage": {
 			"patterns": [{
 				"name": "variable.other.intercal",
-				"match": "[.:;,@][V&?\\^]?[0-9]+"
+				"match": "[.:;,@][V&?\\^¥]?[0-9]+"
 			},
 			{
 				"name": "constant.numeric.intercal",
@@ -65,7 +65,7 @@
 		"operators": {
 			"patterns": [{
 				"name": "keyword.opeator.intercal",
-				"match": "(~|\\$|\\<-|¢|@|\\?|^|[0-9]+|\\+)"
+				"match": "(~|\\$|\\<-|¢|@|\\?|^|[0-9]+|\\+|¥)"
 			}]
 		},
 		"comment": {
