@@ -28,7 +28,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.intercal",
-				"match": "\\b(?i)(resume|come\\sfrom|next(\\sfrom)?|give\\sup|try\\sagain|while|learns|finish studying)\\b"
+				"match": "\\b(?i)(resume|come\\sfrom|next(\\sfrom)?|give\\sup|try\\sagain|while|learns|finish lecture)\\b"
 			},
 			{
 				"name": "storage.modifier.intercal",
@@ -83,7 +83,7 @@
 		"gerund": {
 			"patterns": [{
 				"name":"string.gerund.intercal",
-				"match": "\\b(?i)(coming\\sfrom|nexting(\\sfrom)?|trying\\sagain|whiling|looping|going\\sback|going\\sahead|creating|resuming|calculating|forgetting|resuming|stashing|ignoring|remembering|abstaining|reinstating|reading\\sout|writing\\sin|commenting|enslaving|freeing|studying|enrolling|finising(\\slecture)?|learning|graduating|stealing|smuggling|destroying)\\b"
+				"match": "\\b(?i)(coming\\sfrom|nexting(\\sfrom)?|trying\\sagain|whiling|looping|going\\sback|going\\sahead|creating|resuming|calculating|forgetting|resuming|stashing|ignoring|remembering|abstaining|reinstating|reading\\sout|writing\\sin|commenting|enslaving|freeing|studying|enrolling|finishing(\\slecture)?|learning|graduating|stealing|smuggling|destroying)\\b"
 				}
 			]
 		}
