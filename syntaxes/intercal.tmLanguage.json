@@ -2,8 +2,10 @@
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "Intercal",
 	"patterns": [
+		{"include": "#whitespace"},
 		{"include": "#labels"},
 		{"include": "#imparitive"},
+		{"include": "#sparks"},
 		{"include": "#keywords"},
 		{"include": "#gerund"},
 		{"include": "#storage"},
@@ -12,6 +14,10 @@
 
 	],
 	"repository": {
+		"whitespace": {
+			"name": "whitespace.intercal",
+			"match": "\\s"
+		},
 		"imparitive": {
 
 			"patterns": [
@@ -32,7 +38,7 @@
 			},
 			{
 				"name": "storage.modifier.intercal",
-				"match": "(?i)(sub)"
+				"match": "(?i)sub"
 			},
 
 			{
@@ -46,9 +52,6 @@
 
 			}
 		]
-		},
-		"paren-expression": {
-			"name": "paren.rabbitears.double.intercal"
 		},
 		"storage": {
 			"patterns": [{
@@ -86,6 +89,13 @@
 				"match": "\\b(?i)(coming\\sfrom|nexting(\\sfrom)?|trying\\sagain|whiling|looping|going\\sback|going\\sahead|creating|resuming|calculating|forgetting|resuming|stashing|ignoring|remembering|abstaining|reinstating|reading\\sout|writing\\sin|commenting|enslaving|freeing|studying|enrolling|finishing(\\slecture)?|learning|graduating|stealing|smuggling|destroying)\\b"
 				}
 			]
+		},
+		
+		"sparks": {
+			"name": "punctuation.paren.intercal",
+			"match": "[\"']"
+
+		
 		}
 
 	},
