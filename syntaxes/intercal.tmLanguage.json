@@ -9,6 +9,8 @@
 		{"include": "#keywords"},
 		{"include": "#gerund"},
 		{"include": "#storage"},
+		{"include": "#metaprogramming"},
+		{"include": "#quantum"},
 		{"include": "#comment"},
 		{"include": "#operators"}
 
@@ -43,12 +45,12 @@
 
 			{
 				"name": "keyword.other.intercal",
-				"match": "\\b(?i)(reinstate|abstain|forget|stash|retrieve|ignore|remember|read\\sout|write\\sin|create|enslave|free|study|enrol|graduate|steal|smuggle|destroy)\\b"
+				"match": "\\b(?i)(reinstate|abstain|forget|stash|retrieve|ignore|remember|read\\sout|write\\sin|create|enslave|free|study|enrol|graduate|steal|smuggle|destroy|case)\\b"
 
 			},
 			{
 				"name": "keyword.other.intercal",
-				"match": "\\b(?i)(at|in class|learns|to learn|from|to)\\b"
+				"match": "\\b(?i)(at|in class|learns|to learn|from|to|on|then|esac|or|as)\\b"
 
 			}
 		]
@@ -56,7 +58,20 @@
 		"storage": {
 			"patterns": [{
 				"name": "variable.other.intercal",
-				"match": "[.:;,@][V&?\\^¥]?[0-9]+"
+				"match": "[.:;,][V&?\\^¥\\|\\-]?[1-9][0-9]*"
+			},{
+				"name": "variable.other.intercal",
+				"match": "@[1-9][0-9]*"
+
+			},{
+				"name": "variable.language.intercal",
+				"match": "@0"
+
+			},
+			{
+				"name": "variable.language.intercal",
+				"match": "_[12]"
+
 			},
 			{
 				"name": "constant.numeric.intercal",
@@ -65,10 +80,25 @@
 			}]
 			
 		},
+		"metaprogramming": {
+			"patterns": [{
+				"name": "variable.language.intercal",
+				"match": "\\?(RNAME|NAMES|STMT_LABEL|CONSTANT|ASSEMBLER|BASE|COMPILER|EXTENSION|IACC|OPTIMIZER|OPTION|POSTPRE|ANYTHING|BACKSPACE|JUNK|SPACE|SYMBOL|SWAP|EXPRESSION|GERUND|UNARY|BINARY|VERB|TEMPLATE)"
+
+			},
+			{
+				"name": "variable.language.intercal",
+				"match":"%[A-Z]+"
+			}
+
+
+			]
+
+		},
 		"operators": {
 			"patterns": [{
 				"name": "keyword.opeator.intercal",
-				"match": "(~|\\$|\\<-|¢|@|\\?|^|[0-9]+|\\+|¥)"
+				"match": "(~|\\$|\\<-|¢|@|\\?|^|[0-9]+|\\+|¥|\\||\\-|\\\\|/|,|\\*|=)"
 			}]
 		},
 		"comment": {
@@ -86,7 +116,7 @@
 		"gerund": {
 			"patterns": [{
 				"name":"string.gerund.intercal",
-				"match": "\\b(?i)(coming\\sfrom|nexting(\\sfrom)?|trying\\sagain|whiling|looping|going\\sback|going\\sahead|creating|resuming|calculating|forgetting|resuming|stashing|ignoring|remembering|abstaining|reinstating|reading\\sout|writing\\sin|commenting|enslaving|freeing|studying|enrolling|finishing(\\slecture)?|learning|graduating|stealing|smuggling|destroying)\\b"
+				"match": "\\b(?i)(coming(\\sfrom)?|nexting(\\sfrom)?|trying\\sagain|whiling|looping|going\\sback|going\\sahead|creating|resuming|calculating|forgetting|stashing|ignoring|remembering|abstaining|reinstating|reading\\sout|writing\\sin|commenting|enslaving|freeing|studying|enrolling|finishing(\\slecture)?|learning|graduating|stealing|smuggling|destroying|casing|giving(\\sup)?|/quantum\\scomputing)\\b"
 				}
 			]
 		},
@@ -96,6 +126,11 @@
 			"match": "[\"']"
 
 		
+		},
+		"quantum":{
+			"name":"string.quantum.intercal",
+			"match": "(?i)(WHILE\\sNOT\\sASSIGNING\\sTO\\sIT|WHILE\\sREMEMBERING\\s(THEM|IT)|WHILE\\sIGNORING\\s(THEM|IT)|WHILE\\sREINSTATING\\s(THEM|IT)|WHILE\\sABSTAINING\\sFROM\\s(THEM|IT)|WHILE\\sNOT\\sCOMING\\sFROM\\sTHERE|WHILE\\sNOT\\sNEXTING|WHILE\\sREMEMBERING|WHILE\\sNOT\\sRESUMING|WHILE\\sNOT\\sNEXTING\\sFROM\\sTHERE|WHILE\\sNOT\\sSTASHING\\sTHEM|WHILE\\sNOT\\sRETRIEVING\\sTHEM|WHILE\\sCONTINUING\\sTO\\sRUN|WHILE\\sNOT\\sWRITING\\sTHEM|WHILE\\sLEAVING\\sIT\\sFREE|WHILE\\sLEAVING\\sIT\\sIN\\sSLAVERY|WHILE\\sNOT\\sSTUDYING\\sIT|WHILE\\sNOT\\sENROLLING|WHILE\\sNOT\\sLEARNING\\sIT|WHILE\\sCONTINUING\\sIT|WHILE\\sREMAINING\\sA\\sSTUDENT|WHILE\\sLEAVING\\s(IT|THEM)\\sUNCHANGED|WHILE\\sNOT\\sCREATING\\sIT|WHILE\\sNOT\\sDESTROYING\\sIT|WHILE\\sNOT\\sSTEALING\\sIT|WHILE\\sNOT\\sSMUGGLING\\sIT|WHILE\\sNOT\\sCASING\\sIT\\sIN)"
+
 		}
 
 	},
