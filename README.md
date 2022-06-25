@@ -20,7 +20,7 @@ This extension contributes the following settings:
 
 ## Known Issues
 
-Quantum Intercal isn't implemented yet
+None that I know of.
 
 ## Release Notes
 

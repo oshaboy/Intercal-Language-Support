@@ -2,15 +2,15 @@
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "Intercal",
 	"patterns": [
+		{"include": "#quantum"},
 		{"include": "#whitespace"},
 		{"include": "#labels"},
 		{"include": "#imparitive"},
 		{"include": "#sparks"},
 		{"include": "#keywords"},
-		{"include": "#gerund"},
 		{"include": "#storage"},
 		{"include": "#metaprogramming"},
-		{"include": "#quantum"},
+		{"include": "#gerund"},
 		{"include": "#comment"},
 		{"include": "#operators"}
 
@@ -101,10 +101,15 @@
 				"match": "(~|\\$|\\<-|¢|@|\\?|^|[0-9]+|\\+|¥|\\||\\-|\\\\|/|,|\\*|=)"
 			}]
 		},
+		"quantum":{
+			"name":"string.quantum.intercal",
+			"match": "(?i)(WHILE\\sNOT\\sASSIGNING\\sTO\\sIT|WHILE\\sREMEMBERING\\s(THEM|IT)|WHILE\\sIGNORING\\s(THEM|IT)|WHILE\\sREINSTATING\\s(THEM|IT)|WHILE\\sABSTAINING\\sFROM\\s(THEM|IT)|WHILE\\sNOT\\sCOMING\\sFROM\\sTHERE|WHILE\\sNOT\\sNEXTING|WHILE\\sREMEMBERING|WHILE\\sNOT\\sRESUMING|WHILE\\sNOT\\sNEXTING\\sFROM\\sTHERE|WHILE\\sNOT\\sSTASHING\\sTHEM|WHILE\\sNOT\\sRETRIEVING\\sTHEM|WHILE\\sCONTINUING\\sTO\\sRUN|WHILE\\sNOT\\sWRITING\\sTHEM|WHILE\\sLEAVING\\sIT\\sFREE|WHILE\\sLEAVING\\sIT\\sIN\\sSLAVERY|WHILE\\sNOT\\sSTUDYING\\sIT|WHILE\\sNOT\\sENROLLING|WHILE\\sNOT\\sLEARNING\\sIT|WHILE\\sCONTINUING\\sIT|WHILE\\sREMAINING\\sA\\sSTUDENT|WHILE\\sLEAVING\\s(IT|THEM)\\sUNCHANGED|WHILE\\sNOT\\sCREATING\\sIT|WHILE\\sNOT\\sDESTROYING\\sIT|WHILE\\sNOT\\sSTEALING\\sIT|WHILE\\sNOT\\sSMUGGLING\\sIT|WHILE\\sNOT\\sCASING\\sIT\\sIN)"
+
+		},
 		"comment": {
 			"patterns": [{
 				"name": "comment.line.intercal",
-				"match": "(?i)(NOT|N'T|¬).*$"
+				"match": "(?i)(^WHILE )(NOT|N'T|¬).*$"
 			}]
 		},
 		"labels": {
@@ -126,13 +131,7 @@
 			"match": "[\"']"
 
 		
-		},
-		"quantum":{
-			"name":"string.quantum.intercal",
-			"match": "(?i)(WHILE\\sNOT\\sASSIGNING\\sTO\\sIT|WHILE\\sREMEMBERING\\s(THEM|IT)|WHILE\\sIGNORING\\s(THEM|IT)|WHILE\\sREINSTATING\\s(THEM|IT)|WHILE\\sABSTAINING\\sFROM\\s(THEM|IT)|WHILE\\sNOT\\sCOMING\\sFROM\\sTHERE|WHILE\\sNOT\\sNEXTING|WHILE\\sREMEMBERING|WHILE\\sNOT\\sRESUMING|WHILE\\sNOT\\sNEXTING\\sFROM\\sTHERE|WHILE\\sNOT\\sSTASHING\\sTHEM|WHILE\\sNOT\\sRETRIEVING\\sTHEM|WHILE\\sCONTINUING\\sTO\\sRUN|WHILE\\sNOT\\sWRITING\\sTHEM|WHILE\\sLEAVING\\sIT\\sFREE|WHILE\\sLEAVING\\sIT\\sIN\\sSLAVERY|WHILE\\sNOT\\sSTUDYING\\sIT|WHILE\\sNOT\\sENROLLING|WHILE\\sNOT\\sLEARNING\\sIT|WHILE\\sCONTINUING\\sIT|WHILE\\sREMAINING\\sA\\sSTUDENT|WHILE\\sLEAVING\\s(IT|THEM)\\sUNCHANGED|WHILE\\sNOT\\sCREATING\\sIT|WHILE\\sNOT\\sDESTROYING\\sIT|WHILE\\sNOT\\sSTEALING\\sIT|WHILE\\sNOT\\sSMUGGLING\\sIT|WHILE\\sNOT\\sCASING\\sIT\\sIN)"
-
 		}
-
 	},
 	"scopeName": "source.i"
 }
