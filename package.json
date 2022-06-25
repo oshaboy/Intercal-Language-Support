@@ -2,7 +2,7 @@
     "name": "intercal-language-support",
     "displayName": "Intercal Language Support",
     "description": "Language Support for the 1972 Esoteric Programming Language.",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "engines": {
         "vscode": "^1.68.0"
     },
