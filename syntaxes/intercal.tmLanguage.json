@@ -4,6 +4,7 @@
 	"patterns": [
 		{"include": "#quantum"},
 		{"include": "#whitespace"},
+		{"include": "#syslib-labels"},
 		{"include": "#labels"},
 		{"include": "#imparitive"},
 		{"include": "#sparks"},
@@ -112,6 +113,14 @@
 				"match": "(?i)(^WHILE )(NOT|N'T|¬).*$"
 			}]
 		},
+		"syslib-labels":{
+			"patterns": [{
+				"name": "entity.name.function",
+				"match": "\\((1[02579][0-9]{2}|5[0124][0-9]{2})\\)"
+			}
+		]
+
+		},
 		"labels": {
 			"patterns": [{
 				"name": "name.section.intercal",
@@ -125,10 +134,9 @@
 				}
 			]
 		},
-		
 		"sparks": {
-			"name": "punctuation.paren.intercal",
-			"match": "[\"']"
+			"name": "punctuation.spark.intercal",
+			"match": "['\"]"
 
 		
 		}
