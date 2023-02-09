@@ -110,7 +110,7 @@
 		"comment": {
 			"patterns": [{
 				"name": "comment.line.intercal",
-				"match": "(?i)(^WHILE )(NOT|N'T|¬).*$"
+				"match": "(?i)(NOT|N'T|¬).*$"
 			}]
 		},
 		"syslib-labels":{

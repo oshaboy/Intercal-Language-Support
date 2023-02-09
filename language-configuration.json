@@ -3,7 +3,7 @@
         ["\"", "\""]
     ],
     "comments": {
-
+	    "lineComment": "DON'T"
     },
     // symbols that are auto closed when typing
     "autoClosingPairs": [
